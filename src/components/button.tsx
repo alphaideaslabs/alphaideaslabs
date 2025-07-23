@@ -5,9 +5,13 @@ import { Link } from './link'
 const variants = {
   primary: clsx(
     'inline-flex items-center justify-center px-4 py-[calc(theme(spacing.2)-1px)]',
-    'rounded-full border border-transparent bg-[#101820] shadow-md',
-    'whitespace-nowrap text-base font-medium text-white',
-    'data-[disabled]:bg-gray-950 data-[hover]:bg-gray-800 data-[disabled]:opacity-40',
+    'rounded-full border border-transparent bg-[#101820] text-[#FFFBEB] shadow-md',
+    'whitespace-nowrap text-base font-medium',
+    'transition-all duration-300 ease-in-out',
+    'hover:border-[#101820]/40 hover:bg-white hover:text-[#101820]',
+    'dark:bg-[#FFC62B] dark:text-[#152534]',
+    'dark:hover:border-[#FFC62B]/40 dark:hover:bg-white dark:hover:text-[#101820]',
+    'data-[disabled]:cursor-not-allowed data-[disabled]:opacity-40',
   ),
   secondary: clsx(
     'relative inline-flex items-center justify-center px-4 py-[calc(theme(spacing.2)-1px)]',

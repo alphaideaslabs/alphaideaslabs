@@ -16,6 +16,9 @@ import { Heading, Subheading } from '@/components/text'
 import type { Metadata } from 'next'
 
 import { AnimatedShinyText } from '@/components/magicui/animated-shiny-text'
+import { InteractiveHoverButton } from '@/components/magicui/interactive-hover-button'
+import { TextAnimate } from '@/components/magicui/text-animate'
+import { TypingAnimation } from '@/components/magicui/typing-animation'
 import { cn } from '@/lib/utils'
 import { ArrowRightIcon } from '@radix-ui/react-icons'
 
@@ -43,18 +46,27 @@ function Hero() {
           }
         />
         <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32">
-          <h1 className="font-display text-balance text-6xl/[0.9] font-medium tracking-tight text-[#101820] sm:text-8xl/[0.8] md:text-9xl/[0.8]">
-            Build once. Impress always.
+          <h1 className="font-display text-balance tracking-tight text-[#101820]">
+            <TypingAnimation className="text-6xl/[0.9] font-medium sm:text-8xl/[0.8] md:text-9xl/[0.8]">
+              Build once. Impress always.
+            </TypingAnimation>
           </h1>
-          <p className="mt-8 max-w-lg text-xl/7 font-medium text-[#101820]/75 sm:text-2xl/8">
+
+          <TextAnimate
+            duration={2.5}
+            as="p"
+            animation="blurIn"
+            by="character"
+            once
+            className="mt-8 max-w-lg text-xl/7 font-medium text-[#101820]/75 sm:text-2xl/8"
+          >
             Alpha helps you launch faster with stunning design and solid code
             all Web3 ready.
-          </p>
+          </TextAnimate>
+
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
             <Button href="#">Get started</Button>
-            <Button variant="secondary" href="/pricing">
-              See pricing
-            </Button>
+            <InteractiveHoverButton>See pricing </InteractiveHoverButton>
           </div>
         </div>
       </Container>
