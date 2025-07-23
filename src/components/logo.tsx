@@ -1,5 +1,6 @@
 'use client'
 
+import { TypingAnimation } from '@/components/magicui/typing-animation'
 import { motion } from 'framer-motion'
 
 export function Logo({ className }: { className?: string }) {
@@ -9,33 +10,6 @@ export function Logo({ className }: { className?: string }) {
   }
 
   return (
-    // <motion.svg
-    //   width={40}
-    //   height={40}
-    //   viewBox="0 0 1080 1080"
-    //   fill="none"
-    //   xmlns="http://www.w3.org/2000/svg"
-    //   initial={{ scale: 1, rotate: 0 }}
-    //   whileHover={{ scale: 1.05, rotate: 1 }}
-    //   transition={{ duration: 0.4, ease: 'easeInOut' }}
-    // >
-    //   <motion.path
-    //     d="M270 744.258C270 738.695 270 620.034 270 620.034C270 620.034 494.343 331.517 498.052 327.809C501.76 324.1 506.064 324.216 512.266 324C512.266 324 626.601 324.001 634.017 324C641.434 323.999 646.996 329.562 646.996 335.742V500.137C647.105 523.665 649.732 531.377 674.807 531.657H799.648C805.828 531.657 810.155 534.746 810.155 542.163V745.494C810.155 753.527 807.682 756 799.648 756H673.571C593.846 756 592.61 705.939 592.61 680.601V587.897C592.61 569.356 560.487 568.533 547.494 585.425L408.438 756H281.743C276.18 756 270 749.82 270 744.258Z"
-    //     fill="#FFC62B"
-    //     initial={{ pathLength: 0 }}
-    //     animate={{ pathLength: 1 }}
-    //     transition={{ duration: 1.2 }}
-    //   />
-    //   <motion.circle
-    //     cx="748.352"
-    //     cy="420.412"
-    //     r="61.8026"
-    //     fill="#152534"
-    //     initial={{ scale: 0 }}
-    //     animate={{ scale: 1 }}
-    //     transition={{ duration: 0.8, delay: 0.5 }}
-    //   />
-    // </motion.svg>
     <div className={`flex items-center gap-3 ${className}`}>
       {/* Logo */}
       <motion.svg
@@ -68,12 +42,14 @@ export function Logo({ className }: { className?: string }) {
 
       {/* Text */}
       <motion.span
-        className="text-xl font-semibold text-[#101820]"
+        className="text-[#101820]"
         initial={{ opacity: 0, x: -10 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.4, duration: 0.6, ease: 'easeOut' }}
       >
-        Alpha Studio Labs
+        <TypingAnimation className="text-lg font-semibold md:text-xl lg:text-2xl">
+          Alpha Studio Labs
+        </TypingAnimation>
       </motion.span>
     </div>
   )

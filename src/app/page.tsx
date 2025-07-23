@@ -4,7 +4,6 @@ import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { Gradient } from '@/components/gradient'
 import { Keyboard } from '@/components/keyboard'
-import { Link } from '@/components/link'
 import { LinkedAvatars } from '@/components/linked-avatars'
 import { LogoCloud } from '@/components/logo-cloud'
 import { LogoCluster } from '@/components/logo-cluster'
@@ -14,8 +13,11 @@ import { Navbar } from '@/components/navbar'
 import { Screenshot } from '@/components/screenshot'
 import { Testimonials } from '@/components/testimonials'
 import { Heading, Subheading } from '@/components/text'
-import { ChevronRightIcon } from '@heroicons/react/16/solid'
 import type { Metadata } from 'next'
+
+import { AnimatedShinyText } from '@/components/magicui/animated-shiny-text'
+import { cn } from '@/lib/utils'
+import { ArrowRightIcon } from '@radix-ui/react-icons'
 
 export const metadata: Metadata = {
   description: 'Alpha Ideas Labs helps you build your next big thing.',
@@ -28,13 +30,16 @@ function Hero() {
       <Container className="relative">
         <Navbar
           banner={
-            <Link
-              href="/blog/radiant-raises-100m-series-a-from-tailwind-ventures"
-              className="flex items-center gap-1 rounded-full bg-[#FFC62B]/65 px-3 py-0.5 text-sm/6 font-medium text-[#101820] data-[hover]:bg-[#FFC62B]/85"
+            <div
+              className={cn(
+                'group rounded-full border border-[#101820]/40 bg-[#FFFBEB] text-sm/[1.5rem] text-[#101820] transition-all ease-in hover:cursor-pointer hover:bg-[#FFC62B]/85 dark:border-[#FFC62B]/10 dark:bg-[#152534] dark:hover:bg-[#1F3345]',
+              )}
             >
-              Build your next big thing
-              <ChevronRightIcon className="size-4" />
-            </Link>
+              <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-[#101820] hover:duration-300 dark:hover:text-[#FFC62B]">
+                <span>Build your next big thing</span>
+                <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+              </AnimatedShinyText>
+            </div>
           }
         />
         <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32">
