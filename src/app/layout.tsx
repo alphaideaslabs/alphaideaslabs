@@ -1,3 +1,5 @@
+import { ScrollProgress } from '@/components/magicui/scroll-progress'
+import { SmoothCursor } from '@/components/ui/smooth-cursor'
 import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
 
@@ -25,7 +27,12 @@ export default function RootLayout({
           href="/blog/feed.xml"
         /> */}
       </head>
-      <body className="text-gray-950 antialiased">{children}</body>
+      <body className="text-gray-950 antialiased">
+        {' '}
+        <ScrollProgress className="top-0 z-50" />
+        <SmoothCursor />
+        {children}
+      </body>
     </html>
   )
 }

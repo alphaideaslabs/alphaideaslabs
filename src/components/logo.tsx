@@ -11,10 +11,8 @@ export function Logo({ className }: { className?: string }) {
 
   return (
     <div className={`flex items-center gap-3 ${className}`}>
-      {/* Logo */}
       <motion.svg
-        width={40}
-        height={32}
+        className="h-7 w-7 flex-shrink-0 md:h-8 md:w-8 lg:h-10 lg:w-10"
         viewBox="0 0 541 432"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +37,6 @@ export function Logo({ className }: { className?: string }) {
           transition={{ duration: 0.8, delay: 0.5 }}
         />
       </motion.svg>
-
       {/* Text */}
       <motion.span
         className="text-[#101820]"

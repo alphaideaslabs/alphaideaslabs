@@ -32,7 +32,7 @@ function Hero() {
           banner={
             <div
               className={cn(
-                'group rounded-full border border-[#101820]/40 bg-[#FFFBEB] text-sm/[1.5rem] text-[#101820] transition-all ease-in hover:cursor-pointer hover:bg-[#FFC62B]/85 dark:border-[#FFC62B]/10 dark:bg-[#152534] dark:hover:bg-[#1F3345]',
+                'group rounded-full border border-[#101820]/40 bg-[#FFFBEB] text-sm text-[#101820] transition-all ease-in hover:cursor-pointer hover:bg-[#FFC62B]/85 dark:border-[#FFC62B]/10 dark:bg-[#152534] dark:hover:bg-[#1F3345]',
               )}
             >
               <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-[#101820] hover:duration-300 dark:hover:text-[#FFC62B]">
