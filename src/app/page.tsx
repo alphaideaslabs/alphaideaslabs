@@ -58,7 +58,8 @@ function Hero() {
             animation="blurIn"
             by="character"
             once
-            className="mt-8 max-w-lg text-xl/7 font-medium text-[#101820]/75 sm:text-2xl/8"
+            // className="text- mt-8 max-w-lg font-medium text-[#101820]/75 sm:text-2xl/8"
+            className="mt-8 max-w-lg text-base font-medium md:text-xl lg:text-2xl"
           >
             Alpha helps you launch faster with stunning design and solid code
             all Web3 ready.
