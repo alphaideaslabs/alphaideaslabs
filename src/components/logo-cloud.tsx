@@ -51,9 +51,12 @@ const logos = [
   },
 ]
 
-export function LogoCloud() {
+interface LogoCloudProps {
+  className?: string
+}
+export function LogoCloud({ className }: LogoCloudProps) {
   return (
-    <section className="overflow-hidden py-16">
+    <section className={`overflow-hidden bg-background py-16 ${className}`}>
       <div className="relative m-auto flex max-w-7xl flex-col items-center gap-6 px-6 md:flex-row md:items-start">
         {/* Caption */}
         <div className="mb-4 w-full text-center md:mb-0 md:w-48 md:shrink-0 md:pr-6 md:text-end">
