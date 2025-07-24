@@ -47,7 +47,7 @@ function Hero() {
         />
         <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32">
           <h1 className="font-display text-balance tracking-tight text-[#101820]">
-            <TypingAnimation className="text-6xl/[0.9] font-medium sm:text-8xl/[0.8] md:text-9xl/[0.8]">
+            <TypingAnimation className="text-5xl font-medium sm:text-8xl/[0.8] md:text-7xl lg:text-9xl">
               Build once. Impress always.
             </TypingAnimation>
           </h1>
@@ -58,7 +58,6 @@ function Hero() {
             animation="blurIn"
             by="character"
             once
-            // className="text- mt-8 max-w-lg font-medium text-[#101820]/75 sm:text-2xl/8"
             className="mt-8 max-w-lg text-base font-medium md:text-xl lg:text-2xl"
           >
             Alpha helps you launch faster with stunning design and solid code
