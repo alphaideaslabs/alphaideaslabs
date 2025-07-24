@@ -47,7 +47,7 @@ function Hero() {
         />
         <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32">
           <h1 className="font-display text-balance tracking-tight text-[#101820]">
-            <TypingAnimation className="text-5xl font-medium sm:text-8xl/[0.8] md:text-7xl lg:text-9xl">
+            <TypingAnimation className="text-4xl font-medium sm:text-8xl/[0.8] md:text-7xl lg:text-9xl">
               Build once. Impress always.
             </TypingAnimation>
           </h1>
