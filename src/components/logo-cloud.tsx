@@ -60,8 +60,8 @@ export function LogoCloud({ className }: LogoCloudProps) {
       <div className="relative m-auto flex max-w-7xl flex-col items-center gap-6 px-6 md:flex-row md:items-start">
         {/* Caption */}
         <div className="mb-4 w-full text-center md:mb-0 md:w-48 md:shrink-0 md:pr-6 md:text-end">
-          <div className="mx-auto border-b pb-6 md:mx-0 md:max-w-44 md:border-r md:pr-6">
-            <p className="text-sm">
+          <div className="w-full border-b pb-6 md:mx-0 md:max-w-44 md:border-b-0 md:border-r md:pb-0 md:pr-6">
+            <p className="text-center text-sm font-medium md:text-end">
               We use these tools and stacks to build our products.
             </p>
           </div>
