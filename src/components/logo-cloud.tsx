@@ -2,6 +2,7 @@
 
 import { InfiniteSlider } from '@/components/ui/infinite-slider'
 import { ProgressiveBlur } from '@/components/ui/progressive-blur'
+import Image from 'next/image'
 
 const logos = [
   {
@@ -56,11 +57,13 @@ interface LogoCloudProps {
 }
 export function LogoCloud({ className }: LogoCloudProps) {
   return (
-    <section className={`overflow-hidden bg-background py-16 ${className}`}>
+    <section
+      className={`overflow-hidden bg-background py-12 md:py-20 lg:py-32 ${className}`}
+    >
       <div className="relative m-auto flex max-w-7xl flex-col items-center gap-6 px-6 md:flex-row md:items-start">
         {/* Caption */}
         <div className="mb-4 w-full text-center md:mb-0 md:w-48 md:shrink-0 md:pr-6 md:text-end">
-          <div className="w-full border-b pb-6 md:mx-0 md:max-w-44 md:border-b-0 md:border-r md:pb-0 md:pr-6">
+          <div className="w-full border-b-2 border-[#101820]/25 pb-6 md:mx-0 md:max-w-44 md:border-b-0 md:border-r-2 md:pb-0 md:pr-6">
             <p className="text-center text-sm font-medium md:text-end">
               We use these tools and stacks to build our products.
             </p>
@@ -75,11 +78,13 @@ export function LogoCloud({ className }: LogoCloudProps) {
                 key={i}
                 className="group relative flex items-center justify-center"
               >
-                <img
+                <Image
                   className="h-auto dark:invert"
                   src={logo.src}
                   alt={`${logo.alt} Logo`}
-                  style={{ height: `${logo.height}px` }}
+                  // style={{ height: `${logo.height}px` }}
+                  width={40}
+                  height={40}
                 />
                 <span className="absolute bottom-full mb-2 hidden rounded-md bg-black px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100">
                   {logo.alt}

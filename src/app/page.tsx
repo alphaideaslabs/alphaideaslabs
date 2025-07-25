@@ -19,6 +19,7 @@ import { AnimatedShinyText } from '@/components/magicui/animated-shiny-text'
 import { InteractiveHoverButton } from '@/components/magicui/interactive-hover-button'
 import { TextAnimate } from '@/components/magicui/text-animate'
 import { TypingAnimation } from '@/components/magicui/typing-animation'
+import Services from '@/components/services'
 import { cn } from '@/lib/utils'
 import { ArrowRightIcon } from '@radix-ui/react-icons'
 
@@ -214,6 +215,7 @@ export default function Home() {
         <Container className="mt-10">
           <LogoCloud />
         </Container>
+        <Services />
         <div className="bg-gradient-to-b from-white from-50% to-gray-100 py-32">
           <FeatureSection />
           <BentoSection />
