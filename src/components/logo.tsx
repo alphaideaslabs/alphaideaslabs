@@ -45,7 +45,7 @@ export function Logo({ className }: { className?: string }) {
         transition={{ delay: 0.4, duration: 0.6, ease: 'easeOut' }}
       >
         <TypingAnimation className="text-lg font-semibold md:text-xl lg:text-2xl">
-          Alpha Studio Labs
+          Alpha Ideas Labs
         </TypingAnimation>
       </motion.span>
     </div>
