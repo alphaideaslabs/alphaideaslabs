@@ -52,17 +52,17 @@ export default function Features() {
     },
     {
       key: 'item-2',
-      title: 'Social Media Design',
-      description:
-        'Social media design is the process of creating visual content for social media platforms to engage users and promote a brand or product.',
-      icon: <FileImage className="size-4" />,
-    },
-    {
-      key: 'item-3',
       title: 'Web3 Development',
       description:
         'Web3 development refers to the creation of decentralized applications (dApps) that run on blockchain technology, enabling peer-to-peer interactions without intermediaries.',
       icon: <CodeXml className="size-4" />,
+    },
+    {
+      key: 'item-3',
+      title: 'Social Media Design',
+      description:
+        'Social media design is the process of creating visual content for social media platforms to engage users and promote a brand or product.',
+      icon: <FileImage className="size-4" />,
     },
     {
       key: 'item-4',
