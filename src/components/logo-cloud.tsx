@@ -60,13 +60,19 @@ export function LogoCloud({ className }: LogoCloudProps) {
     <section
       className={`overflow-hidden bg-background py-12 md:py-20 lg:py-32 ${className}`}
     >
-      <div className="relative m-auto flex max-w-7xl flex-col items-center gap-6 px-6 md:flex-row md:items-start">
+      <div className="relative m-auto flex max-w-7xl flex-col items-center gap-6 md:flex-row md:items-start">
         {/* Caption */}
         <div className="mb-4 w-full text-center md:mb-0 md:w-48 md:shrink-0 md:pr-6 md:text-end">
-          <div className="w-full border-b-2 border-[#101820]/25 pb-6 md:mx-0 md:max-w-44 md:border-b-0 md:border-r-2 md:pb-0 md:pr-6">
-            <p className="text-center text-sm font-medium md:text-end">
+          {/* <div className="border-b-2 border-[#101820]/20 pb-6 md:mx-0 md:max-w-44 md:border-b-0 md:border-r-2 md:pb-0 md:pr-6">
+            <p className="text-start text-sm font-medium md:text-end">
               We use these tools and stacks to build our products.
             </p>
+          </div> */}
+          <div className="w-[60%] border-[#101820]/20 pb-6 md:mx-0 md:max-w-44 md:border-b-0 md:border-r-2 md:pb-0 md:pr-6 md:w-full lg:w-full">
+            <p className="text-start text-sm font-medium md:text-end">
+              We use these tools and stacks to build our products.
+            </p>
+            <div className="mt-6 h-[1.5px] w-[90%] bg-[#101820]/20 md:hidden" />
           </div>
         </div>
 

@@ -75,18 +75,22 @@ function Hero() {
   )
 }
 
-function FeatureSection() {
+function Portofolio() {
   return (
     <div className="overflow-hidden">
-      <Container className="pb-24">
-        <Heading as="h2" className="max-w-3xl">
-          A snapshot of your entire sales pipeline.
-        </Heading>
+      <Container className="pb-14">
+        <h2 className="max-w-3xl text-balance text-3xl font-semibold text-[#101820] md:text-4xl lg:text-6xl">
+          Work that speaks for itself.
+        </h2>
+        <p className="mt-6 max-w-3xl text-base text-[#101820]/70 md:text-lg">
+          Explore how we help founders and brands turn ideas into stunning
+          digital experiencesfrom bold logos to Web3-ready products.
+        </p>
         <Screenshot
-          width={1216}
-          height={768}
-          src="/screenshots/app.png"
-          className="mt-16 h-[36rem] sm:h-auto sm:w-[76rem]"
+          width={1504}
+          height={1152}
+          src="https://res.cloudinary.com/db7cfcxxh/image/upload/v1753530197/web3-ui_b0maip.webp"
+          className="mt-16 h-auto w-full"
         />
       </Container>
     </div>
@@ -96,12 +100,13 @@ function FeatureSection() {
 function BentoSection() {
   return (
     <Container>
-      <Subheading>Sales</Subheading>
-      <Heading as="h3" className="mt-2 max-w-3xl">
-        Know more about your customers than they do.
-      </Heading>
-
-      <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
+      <p className="mt-2 max-w-3xl text-base text-[#101820]/70 md:text-lg">
+        Every project below is crafted with intention whether it’s a logo that
+        defines a brand, a UI that guides a user, or a landing page that
+        converts. We partner with startups and digitalfirst companies to bring
+        ideas to life with clean design and strong code.
+      </p>
+      <div className="grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
         <BentoCard
           eyebrow="Insight"
           title="Get perfect clarity"
@@ -217,7 +222,7 @@ export default function Home() {
         </Container>
         <Services />
         <div className="bg-gradient-to-b from-white from-50% to-gray-100 py-32">
-          <FeatureSection />
+          <Portofolio />
           <BentoSection />
         </div>
         <DarkBentoSection />
