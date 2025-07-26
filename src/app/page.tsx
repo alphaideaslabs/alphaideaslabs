@@ -106,7 +106,7 @@ function BentoSection() {
         converts. We partner with startups and digitalfirst companies to bring
         ideas to life with clean design and strong code.
       </p>
-      <div className="grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
+      <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
         <BentoCard
           eyebrow="Insight"
           title="Get perfect clarity"
