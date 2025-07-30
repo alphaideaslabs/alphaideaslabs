@@ -5,7 +5,7 @@ const members = [
     name: 'Muff1',
     role: 'Co-Founder',
     avatar:
-      'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753776603/muffi.jpg',
+      'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753776603/muff1.jpg',
     link: '#',
   },
   {
