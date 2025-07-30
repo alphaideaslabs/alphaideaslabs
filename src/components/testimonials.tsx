@@ -19,45 +19,39 @@ import { Heading, Subheading } from './text'
 
 const testimonials = [
   {
-    img: '/testimonials/tina-yards.jpg',
-    name: 'Tina Yards',
-    title: 'VP of Sales, Protocol',
+    img: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753850664/client-3.jpg',
+    name: 'Vanessa W.',
+    title: 'CEO of a YC-funded startup',
     quote:
       'Thanks to Radiant, we’re finding new leads that we never would have found with legal methods.',
   },
   {
-    img: '/testimonials/conor-neville.jpg',
-    name: 'Conor Neville',
-    title: 'Head of Customer Success, TaxPal',
+    img: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753850664/client-1.jpg',
+    name: 'Julien Lefevre',
+    title: 'Chief Growth Officer, SignalGrid',
     quote:
-      'Radiant made undercutting all of our competitors an absolute breeze.',
+      'We used to chase leads blindly. Alpha brought visibility and precision into our funnel.',
   },
   {
-    img: '/testimonials/amy-chase.jpg',
-    name: 'Amy Chase',
-    title: 'Head of GTM, Pocket',
+    img: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753850664/client-2.jpg',
+    name: 'Sierra Vaughn',
+    title: 'CEO, VectorLeap',
     quote:
-      'We closed a deal in literally a few minutes because we knew their exact budget.',
+      'With Alpha, our team closes faster and works sharper without adding extra headcount',
   },
   {
-    img: '/testimonials/veronica-winton.jpg',
-    name: 'Veronica Winton',
-    title: 'CSO, Planeteria',
+    img: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753850664/client-4.jpg',
+    name: 'Luca Moretti',
+    title: 'Head of Revenue Ops, ScaleSync',
     quote:
-      'We’ve managed to put two of our main competitors out of business in 6 months.',
+      'From chaos to clarity. Alpha turned our messy pipeline into a well-oiled machine.',
   },
   {
-    img: '/testimonials/dillon-lenora.jpg',
-    name: 'Dillon Lenora',
-    title: 'VP of Sales, Detax',
-    quote: 'I was able to replace 80% of my team with RadiantAI bots.',
-  },
-  {
-    img: '/testimonials/harriet-arron.jpg',
-    name: 'Harriet Arron',
-    title: 'Account Manager, Commit',
+    img: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753851412/client-5.jpg',
+    name: 'Ethan Caldwell',
+    title: 'Co-Founder & CRO, NovaForge',
     quote:
-      'I’ve smashed all my targets without having to speak to a lead in months.',
+      'Alpha made our sales motion feel like a modern growth engine, not guesswork.',
   },
 ]
 

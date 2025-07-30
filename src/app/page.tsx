@@ -1,78 +1,23 @@
 import { BentoCard } from '@/components/bento-card'
-import { Button } from '@/components/button'
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
-import { Gradient } from '@/components/gradient'
 import { Keyboard } from '@/components/keyboard'
 import { LinkedAvatars } from '@/components/linked-avatars'
 import { LogoCloud } from '@/components/logo-cloud'
 import { LogoCluster } from '@/components/logo-cluster'
 import { LogoTimeline } from '@/components/logo-timeline'
 import { Map } from '@/components/map'
-import { Navbar } from '@/components/navbar'
 import { Screenshot } from '@/components/screenshot'
 import { Testimonials } from '@/components/testimonials'
 import { Heading, Subheading } from '@/components/text'
 import type { Metadata } from 'next'
 
-import { AnimatedShinyText } from '@/components/magicui/animated-shiny-text'
-import { InteractiveHoverButton } from '@/components/magicui/interactive-hover-button'
-import { TextAnimate } from '@/components/magicui/text-animate'
-import { TypingAnimation } from '@/components/magicui/typing-animation'
+import FAQ from '@/components/faq'
+import Hero from '@/components/hero'
 import Services from '@/components/services'
-import { cn } from '@/lib/utils'
-import { ArrowRightIcon } from '@radix-ui/react-icons'
 
 export const metadata: Metadata = {
   description: 'Alpha Ideas Labs helps you build your next big thing.',
-}
-
-function Hero() {
-  return (
-    <div className="relative">
-      <Gradient className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-inset ring-black/5" />
-      <Container className="relative">
-        <Navbar
-          banner={
-            <div
-              className={cn(
-                'group rounded-full border border-[#101820]/40 bg-[#FFFBEB] text-sm text-[#101820] transition-all ease-in hover:cursor-pointer hover:bg-[#FFC62B]/85 dark:border-[#FFC62B]/10 dark:bg-[#152534] dark:hover:bg-[#1F3345]',
-              )}
-            >
-              <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-[#101820] hover:duration-300 dark:hover:text-[#FFC62B]">
-                <span>Build your next big thing</span>
-                <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
-              </AnimatedShinyText>
-            </div>
-          }
-        />
-        <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32">
-          <h1 className="font-display text-balance tracking-tight text-[#101820]">
-            <TypingAnimation className="text-[44px] font-medium md:text-7xl lg:text-9xl">
-              Build once. Impress always.
-            </TypingAnimation>
-          </h1>
-
-          <TextAnimate
-            duration={2.5}
-            as="p"
-            animation="blurIn"
-            by="character"
-            once
-            className="mt-8 max-w-lg text-base font-medium md:text-xl lg:text-2xl"
-          >
-            Alpha helps you launch faster with stunning design and solid code
-            all Web3 ready.
-          </TextAnimate>
-
-          <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-            <Button href="#">Get started</Button>
-            <InteractiveHoverButton>See pricing </InteractiveHoverButton>
-          </div>
-        </div>
-      </Container>
-    </div>
-  )
 }
 
 function Portofolio() {
@@ -110,45 +55,45 @@ function BentoSection() {
         <BentoCard
           eyebrow="Insight"
           title="Get perfect clarity"
-          description="Radiant uses social engineering to build a detailed financial picture of your leads. Know their budget, compensation package, social security number, and more."
+          description="Alpha Ideas Labs helps startups and brands turn complex ideas into clear, usable products from UI flows to smart branding. We start with what matters : understanding your users and your business goals."
           graphic={
-            <div className="h-80 bg-[url(/screenshots/profile.png)] bg-[size:1000px_560px] bg-[left_-109px_top_-112px] bg-no-repeat" />
+            <div className="h-80 bg-[url(https://res.cloudinary.com/db7cfcxxh/image/upload/v1753757520/ui-ux-2.webp)] bg-cover bg-[left_0px_top_-12px] bg-no-repeat" />
           }
           fade={['bottom']}
           className="max-lg:rounded-t-4xl lg:col-span-3 lg:rounded-tl-4xl"
         />
         <BentoCard
           eyebrow="Analysis"
-          title="Undercut your competitors"
-          description="With our advanced data mining, you’ll know which companies your leads are talking to and exactly how much they’re being charged."
+          title="Outdesign your competitors"
+          description="In crowded markets, clarity wins. We build strong brand visuals and seamless UX that help you stand out and stay memorable."
           graphic={
-            <div className="absolute inset-0 bg-[url(/screenshots/competitors.png)] bg-[size:1100px_650px] bg-[left_-38px_top_-73px] bg-no-repeat" />
+            <div className="absolute inset-0 bg-[url(https://res.cloudinary.com/db7cfcxxh/image/upload/v1753757971/ui-ux-3.webp)] bg-cover bg-[left_0px_top_0px] bg-no-repeat" />
           }
           fade={['bottom']}
           className="lg:col-span-3 lg:rounded-tr-4xl"
         />
         <BentoCard
           eyebrow="Speed"
-          title="Built for power users"
-          description="It’s never been faster to cold email your entire contact list using our streamlined keyboard shortcuts."
+          title="Move fast, build faster"
+          description="We work like a startup no fluff, just focus. Our agile process helps founders launch MVPs, iterate fast, and scale with confidence."
           graphic={
             <div className="flex size-full pl-10 pt-10">
-              <Keyboard highlighted={['LeftCommand', 'LeftShift', 'D']} />
+              <Keyboard highlighted={['LeftCommand', 'LeftShift', 'A']} />
             </div>
           }
           className="lg:col-span-2 lg:rounded-bl-4xl"
         />
         <BentoCard
-          eyebrow="Source"
-          title="Get the furthest reach"
-          description="Bypass those inconvenient privacy laws to source leads from the most unexpected places."
+          eyebrow="Craft"
+          title="Designs that feel premium"
+          description="Every logo, layout, and line of code is crafted to be simple, elegant, and functional. We make design that works, not just looks nice."
           graphic={<LogoCluster />}
           className="lg:col-span-2"
         />
         <BentoCard
-          eyebrow="Limitless"
-          title="Sell globally"
-          description="Radiant helps you sell in locations currently under international embargo."
+          eyebrow="Reach"
+          title="Launch global ready experiences"
+          description="From Web3 dApps to responsive social media campaigns, we help digital products reach their audience across platforms and borders."
           graphic={<Map />}
           className="max-lg:rounded-b-4xl lg:col-span-2 lg:rounded-br-4xl"
         />
@@ -225,7 +170,8 @@ export default function Home() {
           <Portofolio />
           <BentoSection />
         </div>
-        <DarkBentoSection />
+        {/* <DarkBentoSection /> */}
+        <FAQ />
       </main>
       <Testimonials />
       <Footer />

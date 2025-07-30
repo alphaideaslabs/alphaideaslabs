@@ -21,19 +21,19 @@ export default function Features() {
   const images = {
     'item-1': {
       src: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753420966/ui-ux_gu50tv.webp',
-      alt: 'Database visualization',
+      alt: 'UI/UX Design',
     },
     'item-2': {
       src: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753422967/web3_b1jqou.webp',
-      alt: 'Security authentication',
+      alt: 'Web3 Development',
     },
     'item-3': {
-      src: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753423143/social-media_u9miey.webp',
-      alt: 'Identity management',
+      src: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753757290/social-media.webp',
+      alt: 'Social Media Design',
     },
     'item-4': {
       src: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753423206/logo_leuay8.webp',
-      alt: 'Analytics dashboard',
+      alt: 'Logo Design',
     },
   }
 
@@ -76,7 +76,6 @@ export default function Features() {
   return (
     <section className="px-4 py-12 md:px-6 md:py-16 lg:px-0 lg:py-20">
       <div className="bg-linear-to-b absolute inset-0 -z-10 dark:block dark:to-[color-mix(in_oklab,var(--color-zinc-900)_75%,var(--color-background))] sm:inset-6 sm:rounded-b-3xl"></div>
-
       <div className="mx-auto max-w-2xl space-y-8 dark:[--color-border:color-mix(in_oklab,var(--color-white)_10%,transparent)] md:space-y-14 lg:max-w-7xl lg:space-y-20">
         <div className="relative z-10 max-w-2xl space-y-4 text-left md:space-y-6">
           <h2 className="text-balance text-3xl font-semibold text-[#101820] md:text-4xl lg:text-6xl">

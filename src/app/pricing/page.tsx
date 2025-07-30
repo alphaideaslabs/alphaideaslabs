@@ -24,85 +24,79 @@ const tiers = [
   {
     name: 'Starter' as const,
     slug: 'starter',
-    description: 'Everything you need to start selling.',
+    description:
+      'Just enough firepower to look like you know what you’re doing.',
     priceMonthly: 99,
     href: '#',
     highlights: [
-      { description: 'Up to 3 team members' },
-      { description: 'Up to 5 deal progress boards' },
-      { description: 'Source leads from select platforms' },
-      { description: 'RadiantAI integrations', disabled: true },
-      { description: 'Competitor analysis', disabled: true },
+      { description: 'Up to 2 tasks/month' },
+      { description: 'Basic UI/UX or Social Media Design' },
+      { description: 'Async Email Support' },
+      { description: 'Brand audit lite' },
+      { description: 'Perfect for early idea-stage founders' },
     ],
     features: [
-      { section: 'Features', name: 'Accounts', value: 3 },
-      { section: 'Features', name: 'Deal progress boards', value: 5 },
-      { section: 'Features', name: 'Sourcing platforms', value: 'Select' },
-      { section: 'Features', name: 'Contacts', value: 100 },
-      { section: 'Features', name: 'AI assisted outreach', value: false },
-      { section: 'Analysis', name: 'Competitor analysis', value: false },
-      { section: 'Analysis', name: 'Dashboard reporting', value: false },
-      { section: 'Analysis', name: 'Community insights', value: false },
-      { section: 'Analysis', name: 'Performance analysis', value: false },
-      { section: 'Support', name: 'Email support', value: true },
-      { section: 'Support', name: '24 / 7 call center support', value: false },
-      { section: 'Support', name: 'Dedicated account manager', value: false },
+      { section: 'Design', name: 'Task requests', value: '2 / month' },
+      { section: 'Design', name: 'UI/UX Design', value: true },
+      { section: 'Design', name: 'Logo or Social Media Design', value: true },
+      { section: 'Design', name: 'Web3 components', value: false },
+      { section: 'Ops', name: 'Async Communication', value: 'Email only' },
+      { section: 'Ops', name: 'Delivery speed', value: '3–5 days / task' },
+      { section: 'Support', name: 'Design audit', value: 'Lite' },
+      { section: 'Support', name: 'Dedicated PM', value: false },
     ],
   },
   {
     name: 'Growth' as const,
     slug: 'growth',
-    description: 'All the extras for your growing team.',
+    description:
+      'For startups who just got their first “maybe” from an investor.',
     priceMonthly: 149,
     href: '#',
     highlights: [
-      { description: 'Up to 10 team members' },
-      { description: 'Unlimited deal progress boards' },
-      { description: 'Source leads from over 50 verified platforms' },
-      { description: 'RadiantAI integrations' },
-      { description: '5 competitor analyses per month' },
+      { description: 'Up to 5 tasks/month' },
+      { description: 'Includes UI/UX, Logo, Social Media & Lite Web3' },
+      { description: 'Slack/Notion async comms' },
+      { description: 'Visual consistency review' },
+      { description: 'Weekly progress updates' },
     ],
     features: [
-      { section: 'Features', name: 'Accounts', value: 10 },
-      { section: 'Features', name: 'Deal progress boards', value: 'Unlimited' },
-      { section: 'Features', name: 'Sourcing platforms', value: '100+' },
-      { section: 'Features', name: 'Contacts', value: 1000 },
-      { section: 'Features', name: 'AI assisted outreach', value: true },
-      { section: 'Analysis', name: 'Competitor analysis', value: '5 / month' },
-      { section: 'Analysis', name: 'Dashboard reporting', value: true },
-      { section: 'Analysis', name: 'Community insights', value: true },
-      { section: 'Analysis', name: 'Performance analysis', value: true },
-      { section: 'Support', name: 'Email support', value: true },
-      { section: 'Support', name: '24 / 7 call center support', value: true },
-      { section: 'Support', name: 'Dedicated account manager', value: false },
+      { section: 'Design', name: 'Task requests', value: '5 / month' },
+      { section: 'Design', name: 'UI/UX Design', value: true },
+      { section: 'Design', name: 'Logo & Social Media Design', value: true },
+      { section: 'Design', name: 'Web3 components', value: 'Lite' },
+      { section: 'Ops', name: 'Async Communication', value: 'Slack + Notion' },
+      { section: 'Ops', name: 'Delivery speed', value: '2–3 days / task' },
+      { section: 'Support', name: 'Design audit', value: 'Standard' },
+      { section: 'Support', name: 'Dedicated PM', value: false },
     ],
   },
   {
-    name: 'Enterprise' as const,
-    slug: 'enterprise',
-    description: 'Added flexibility to close deals at scale.',
+    name: 'Scale' as const,
+    slug: 'scale',
+    description: 'When you’re too busy closing deals to brief designers.',
     priceMonthly: 299,
     href: '#',
     highlights: [
-      { description: 'Unlimited active team members' },
-      { description: 'Unlimited deal progress boards' },
-      { description: 'Source leads from over 100 verified platforms' },
-      { description: 'RadiantAI integrations' },
-      { description: 'Unlimited competitor analyses' },
+      { description: 'Unlimited design/dev requests (1 at a time)' },
+      { description: 'Includes full UI/UX, Web3, decks, branding & more' },
+      { description: 'Dedicated PM & Notion-based project wiki' },
+      { description: 'Priority task queue' },
+      { description: 'Competitor teardown & visual strategy doc' },
     ],
     features: [
-      { section: 'Features', name: 'Accounts', value: 'Unlimited' },
-      { section: 'Features', name: 'Deal progress boards', value: 'Unlimited' },
-      { section: 'Features', name: 'Sourcing platforms', value: '100+' },
-      { section: 'Features', name: 'Contacts', value: 'Unlimited' },
-      { section: 'Features', name: 'AI assisted outreach', value: true },
-      { section: 'Analysis', name: 'Competitor analysis', value: 'Unlimited' },
-      { section: 'Analysis', name: 'Dashboard reporting', value: true },
-      { section: 'Analysis', name: 'Community insights', value: true },
-      { section: 'Analysis', name: 'Performance analysis', value: true },
-      { section: 'Support', name: 'Email support', value: true },
-      { section: 'Support', name: '24 / 7 call center support', value: true },
-      { section: 'Support', name: 'Dedicated account manager', value: true },
+      { section: 'Design', name: 'Task requests', value: 'Unlimited*' },
+      { section: 'Design', name: 'UI/UX Design', value: true },
+      { section: 'Design', name: 'Web3 + Dev-ready assets', value: true },
+      {
+        section: 'Design',
+        name: 'Pitch deck + investor collateral',
+        value: true,
+      },
+      { section: 'Ops', name: 'Dedicated PM + internal wiki', value: true },
+      { section: 'Ops', name: 'Delivery speed', value: '1–2 days / task' },
+      { section: 'Support', name: 'Full design audit', value: true },
+      { section: 'Support', name: 'Strategic teardown', value: true },
     ],
   },
 ]
@@ -110,10 +104,11 @@ const tiers = [
 function Header() {
   return (
     <Container className="mt-16">
-      <Heading as="h1">Pricing that grows with your team size.</Heading>
+      <Heading as="h1">Pricing that scales with your ambition.</Heading>
       <Lead className="mt-6 max-w-3xl">
-        Companies all over the world have closed millions of deals with Radiant.
-        Sign up today and start selling smarter.
+        You&apos;re not just buying design or dev hours you&apos;re investing in
+        velocity. From scrappy prototypes to polished pitch decks, we&apos;ve got a
+        plan for every stage.
       </Lead>
     </Container>
   )
@@ -129,7 +124,9 @@ function PricingCards() {
             <PricingCard key={tierIndex} tier={tier} />
           ))}
         </div>
-        <LogoCloud className="mt-24" />
+        <div className="mt-24 rounded-2xl bg-white px-8 shadow-md">
+          <LogoCloud />
+        </div>
       </Container>
     </div>
   )
@@ -367,7 +364,7 @@ function PlusIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 function Testimonial() {
   return (
-    <div className="mx-2 my-24 rounded-4xl bg-gray-900 bg-[url(/dot-texture.svg)] pb-24 pt-72 lg:pt-36">
+    <div className="mx-2 my-24 rounded-4xl bg-[#FFC62B] bg-[url(/dot-texture.svg)] pb-24 pt-72 lg:pt-36">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-[384px_1fr_1fr]">
           <div className="-mt-96 lg:-mt-52">
@@ -376,8 +373,8 @@ function Testimonial() {
                 <div className="overflow-hidden rounded-3xl shadow-2xl outline outline-1 -outline-offset-1 outline-black/10">
                   <img
                     alt=""
-                    src="/testimonials/tina-yards.jpg"
-                    className="aspect-[3/4] w-full object-cover"
+                    src="https://res.cloudinary.com/db7cfcxxh/image/upload/v1753850664/client-3.jpg"
+                    className="aspect-square w-full object-cover"
                   />
                 </div>
               </div>
@@ -386,18 +383,20 @@ function Testimonial() {
           <div className="flex max-lg:mt-16 lg:col-span-2 lg:px-16">
             <figure className="mx-auto flex max-w-xl flex-col gap-16 max-lg:text-center">
               <blockquote>
-                <p className="relative text-3xl tracking-tight text-white before:absolute before:-translate-x-full before:content-['“'] after:absolute after:content-['”'] lg:text-4xl">
-                  Thanks to Radiant, we&apos;re finding new leads that we never
-                  would have found with legal methods.
+                <p className="relative text-3xl tracking-tight text-[#1a1a1a] before:absolute before:-translate-x-full before:content-['“'] after:absolute after:content-['”'] lg:text-4xl">
+                  Alpha helped us go from looking like a high school Figma
+                  project to getting replies from actual VCs. The turnaround
+                  speed was insane and yes, they even fixed our pitch deck
+                  typos.
                 </p>
               </blockquote>
               <figcaption className="mt-auto">
-                <p className="text-sm/6 font-medium text-white">Tina Yards</p>
-                <p className="text-sm/6 font-medium">
-                  <span className="bg-gradient-to-r from-[#fff1be] from-[28%] via-[#ee87cb] via-[70%] to-[#b060ff] bg-clip-text text-transparent">
-                    VP of Sales, Protocol
-                  </span>
+                <p className="text-sm/6 font-medium text-[#1a1a1a]">
+                  Vanessa W.
                 </p>
+                <span className="bg-gradient-to-r from-[#5e4d00] via-[#98417d] to-[#4e2c7f] bg-clip-text text-transparent">
+                  CEO of a YC-funded startup
+                </span>
               </figcaption>
             </figure>
           </div>

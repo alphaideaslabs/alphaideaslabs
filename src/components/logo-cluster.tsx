@@ -2,41 +2,41 @@
 
 import { clsx } from 'clsx'
 import { motion } from 'framer-motion'
-import { Mark } from './logo'
+import Image from 'next/image'
 
 const logos = [
   {
-    src: '/logo-cluster/dribbble.svg',
+    src: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753755769/vscode-logo.svg',
     left: 360,
     top: 144,
     hover: { x: 6, y: 1, rotate: 5, delay: 0.38 },
   },
   {
-    src: '/logo-cluster/dribbble.svg',
+    src: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753755939/figma-logo.svg',
     left: 285,
     top: 20,
     hover: { x: 4, y: -5, rotate: 6, delay: 0.3 },
   },
   {
-    src: '/logo-cluster/glassdoor.svg',
+    src: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753756248/typescript-logo.svg',
     left: 255,
     top: 210,
     hover: { x: 3, y: 5, rotate: 7, delay: 0.2 },
   },
   {
-    src: '/logo-cluster/linkedin.svg',
+    src: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753756364/shadcn-ui-logo.svg',
     left: 144,
     top: 40,
     hover: { x: -2, y: -5, rotate: -6, delay: 0.15 },
   },
   {
-    src: '/logo-cluster/upwork.svg',
+    src: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753756363/vercel-logo.svg',
     left: 36,
     top: 56,
     hover: { x: -4, y: -5, rotate: -6, delay: 0.35 },
   },
   {
-    src: '/logo-cluster/we-work-remotely.svg',
+    src: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753756541/open-ai-logo.svg',
     left: 96,
     top: 176,
     hover: { x: -3, y: 5, rotate: 3, delay: 0.15 },
@@ -89,11 +89,17 @@ function Circles() {
     </div>
   )
 }
-
 function MainLogo() {
   return (
     <div className="absolute left-44 top-32 flex size-16 items-center justify-center rounded-full bg-white shadow ring-1 ring-black/5">
-      <Mark className="h-9 fill-black" />
+      <Image
+        src="https://res.cloudinary.com/db7cfcxxh/image/upload/v1753153784/Alpha_Studio_Logo_ms91id.svg"
+        alt="Alpha Studio Logo"
+        width={50}
+        height={50}
+        className="object-contain"
+        priority
+      />
     </div>
   )
 }
@@ -110,7 +116,7 @@ function Logo({
   hover: { x: number; y: number; rotate: number; delay: number }
 }) {
   return (
-    <motion.img
+    <motion.div
       variants={{
         idle: { x: 0, y: 0, rotate: 0 },
         active: {
@@ -126,11 +132,11 @@ function Logo({
           },
         },
       }}
-      alt=""
-      src={src}
-      style={{ left, top } as React.CSSProperties}
-      className="absolute size-16 rounded-full bg-white shadow ring-1 ring-black/5"
-    />
+      style={{ left, top, position: 'absolute' }}
+      className="flex h-16 w-16 items-center justify-center rounded-full bg-white shadow ring-1 ring-black/5"
+    >
+      <img src={src} alt="" className="h-6 w-6 object-contain" />
+    </motion.div>
   )
 }
 

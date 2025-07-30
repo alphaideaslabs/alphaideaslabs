@@ -6,47 +6,47 @@ import Image from 'next/image'
 
 const logos = [
   {
-    src: 'https://res.cloudinary.com/dnuusu1kb/image/upload/v1751958651/react-original.svg',
-    alt: 'GitHub',
+    src: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753755769/vscode-logo.svg',
+    alt: 'VSCode',
     height: 50,
   },
   {
-    src: 'https://res.cloudinary.com/dnuusu1kb/image/upload/v1751958251/typescript-original.svg',
-    alt: 'Nvidia',
+    src: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753755939/figma-logo.svg',
+    alt: 'FIgma',
     height: 50,
   },
   {
-    src: 'https://res.cloudinary.com/dnuusu1kb/image/upload/v1751958648/tailwindcss-original.svg',
-    alt: 'Column',
+    src: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753756170/react-logo.svg',
+    alt: 'React',
     height: 50,
   },
   {
-    src: 'https://res.cloudinary.com/dnuusu1kb/image/upload/v1751960617/nextjs-dark-original.svg',
-    alt: 'Nike',
+    src: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753756177/nextjs-logo.svg',
+    alt: 'Next JS',
     height: 50,
   },
   {
-    src: 'https://res.cloudinary.com/dnuusu1kb/image/upload/v1752025357/shadcn-ui-light-original.svg',
-    alt: 'GitHub',
+    src: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753756248/typescript-logo.svg',
+    alt: 'TypeScript',
     height: 50,
   },
   {
-    src: 'https://res.cloudinary.com/dnuusu1kb/image/upload/v1752029833/chatgpt-light-original.svg',
-    alt: 'Lemon Squeezy',
+    src: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753756250/tailwindcss-logo.svg',
+    alt: 'Tailwind CSS',
     height: 50,
   },
   {
-    src: 'https://res.cloudinary.com/dnuusu1kb/image/upload/v1752029960/figma-original.svg',
-    alt: 'Laravel',
+    src: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753756364/shadcn-ui-logo.svg',
+    alt: 'Shadcn UI',
     height: 50,
   },
   {
-    src: 'https://res.cloudinary.com/dnuusu1kb/image/upload/v1752029479/vercel-light-original.svg',
-    alt: 'Lilly',
+    src: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753756363/vercel-logo.svg',
+    alt: 'Vercel',
     height: 50,
   },
   {
-    src: 'https://res.cloudinary.com/dnuusu1kb/image/upload/v1752027524/solidity-light-original.svg',
+    src: 'https://res.cloudinary.com/db7cfcxxh/image/upload/v1753756541/open-ai-logo.svg',
     alt: 'OpenAI',
     height: 50,
   },
@@ -60,15 +60,9 @@ export function LogoCloud({ className }: LogoCloudProps) {
     <section
       className={`overflow-hidden bg-background py-12 md:py-20 lg:py-32 ${className}`}
     >
-      <div className="relative m-auto flex max-w-7xl flex-col items-center gap-6 md:flex-row md:items-start">
-        {/* Caption */}
-        <div className="mb-4 w-full text-center md:mb-0 md:w-48 md:shrink-0 md:pr-6 md:text-end">
-          {/* <div className="border-b-2 border-[#101820]/20 pb-6 md:mx-0 md:max-w-44 md:border-b-0 md:border-r-2 md:pb-0 md:pr-6">
-            <p className="text-start text-sm font-medium md:text-end">
-              We use these tools and stacks to build our products.
-            </p>
-          </div> */}
-          <div className="w-[60%] border-[#101820]/20 pb-6 md:mx-0 md:max-w-44 md:border-b-0 md:border-r-2 md:pb-0 md:pr-6 md:w-full lg:w-full">
+      <div className="relative m-auto flex max-w-7xl flex-col gap-6 md:flex-row md:items-center">
+        <div className="mb-4 flex w-full items-center md:mb-0 md:w-48 md:shrink-0 md:pr-6 md:text-end">
+          <div className="w-[60%] border-[#101820]/20 pb-6 md:mx-0 md:w-full md:max-w-44 md:border-b-0 md:border-r-2 md:pb-0 md:pr-6 lg:w-full">
             <p className="text-start text-sm font-medium md:text-end">
               We use these tools and stacks to build our products.
             </p>
@@ -77,7 +71,7 @@ export function LogoCloud({ className }: LogoCloudProps) {
         </div>
 
         {/* Logos */}
-        <div className="relative w-full">
+        <div className="relative w-full items-center">
           <InfiniteSlider speedOnHover={20} speed={40} gap={112}>
             {logos.map((logo, i) => (
               <div
@@ -89,8 +83,8 @@ export function LogoCloud({ className }: LogoCloudProps) {
                   src={logo.src}
                   alt={`${logo.alt} Logo`}
                   // style={{ height: `${logo.height}px` }}
-                  width={40}
-                  height={40}
+                  width={50}
+                  height={50}
                 />
                 <span className="absolute bottom-full mb-2 hidden rounded-md bg-black px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100">
                   {logo.alt}
