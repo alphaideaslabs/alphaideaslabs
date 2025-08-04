@@ -25,7 +25,7 @@ export default function Features() {
         //   </div>
         // }
         />
-        <div className="pb-32 pt-52 md:pb-48 md:pt-48 lg:pb-32 lg:pt-72">
+        <div className="pb-32 pt-48 md:pb-48 md:pt-44 lg:pb-32 lg:pt-64">
           <h1 className="font-display text-balance tracking-tight text-[#101820]">
             <TypingAnimation className="text-[44px] font-medium md:text-7xl lg:text-9xl">
               Build once. Impress always.

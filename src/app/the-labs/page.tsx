@@ -358,7 +358,7 @@ function Careers() {
 
 export default function Company() {
   return (
-    <main className="overflow-hidden">
+    <main className="overflow-hidden pb-32 pt-48 md:pb-48 md:pt-44 lg:pb-32 lg:pt-64">
       <GradientBackground />
       <Container>
         <Navbar />
