@@ -65,7 +65,7 @@ export default function FAQ() {
                 Frequently Asked Questions
               </h2>
               <p className="mt-4 text-sm text-[#101820]/70 md:text-sm lg:text-base">
-                Can&apos;t find what you&apos;re looking for? Contact our
+                Can&apos;t find what you&apos;re looking for? Contact our{' '}
                 <Link
                   href="#"
                   className="text-sm font-medium text-[#FFC62B] hover:underline md:text-sm lg:text-base"

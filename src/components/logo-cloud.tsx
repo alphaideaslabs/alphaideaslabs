@@ -79,13 +79,13 @@ export function LogoCloud({ className }: LogoCloudProps) {
                 className="group relative flex items-center justify-center"
               >
                 <Image
-                  className="h-auto dark:invert"
                   src={logo.src}
                   alt={`${logo.alt} Logo`}
-                  // style={{ height: `${logo.height}px` }}
                   width={50}
                   height={50}
+                  className="dark:invert"
                 />
+
                 <span className="absolute bottom-full mb-2 hidden rounded-md bg-black px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100">
                   {logo.alt}
                 </span>

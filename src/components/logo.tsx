@@ -1,6 +1,5 @@
 'use client'
 
-import { TypingAnimation } from '@/components/magicui/typing-animation'
 import { motion } from 'framer-motion'
 
 export function Logo({ className }: { className?: string }) {
@@ -12,7 +11,7 @@ export function Logo({ className }: { className?: string }) {
   return (
     <div className={`flex items-center gap-3 ${className}`}>
       <motion.svg
-        className="h-7 w-7 flex-shrink-0 md:h-8 md:w-8 lg:h-10 lg:w-10"
+        className="h-6 w-6 flex-shrink-0 md:h-8 md:w-8 lg:h-8 lg:w-8"
         viewBox="0 0 541 432"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -44,9 +43,9 @@ export function Logo({ className }: { className?: string }) {
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.4, duration: 0.6, ease: 'easeOut' }}
       >
-        <TypingAnimation className="text-lg font-semibold md:text-xl lg:text-2xl">
+        {/* <TypingAnimation className="text-lg font-semibold md:text-xl lg:text-2xl">
           Alpha Ideas Labs
-        </TypingAnimation>
+        </TypingAnimation> */}
       </motion.span>
     </div>
   )

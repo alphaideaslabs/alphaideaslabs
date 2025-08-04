@@ -4,7 +4,7 @@ import { Footer } from '@/components/footer'
 import { Gradient, GradientBackground } from '@/components/gradient'
 import { Link } from '@/components/link'
 import { LogoCloud } from '@/components/logo-cloud'
-import { Navbar } from '@/components/navbar'
+import Navbar from '@/components/navbar/navbar'
 import { Heading, Lead, Subheading } from '@/components/text'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import {
@@ -107,8 +107,8 @@ function Header() {
       <Heading as="h1">Pricing that scales with your ambition.</Heading>
       <Lead className="mt-6 max-w-3xl">
         You&apos;re not just buying design or dev hours you&apos;re investing in
-        velocity. From scrappy prototypes to polished pitch decks, we&apos;ve got a
-        plan for every stage.
+        velocity. From scrappy prototypes to polished pitch decks, we&apos;ve
+        got a plan for every stage.
       </Lead>
     </Container>
   )

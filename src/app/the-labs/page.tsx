@@ -3,7 +3,7 @@ import { Button } from '@/components/button'
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { GradientBackground } from '@/components/gradient'
-import { Navbar } from '@/components/navbar'
+import Navbar from '@/components/navbar/navbar'
 import TeamSection from '@/components/team'
 import { Heading, Lead, Subheading } from '@/components/text'
 import type { Metadata } from 'next'
@@ -34,9 +34,9 @@ function Header() {
             and markets.
           </p>
           <p className="mt-8 text-sm/6 text-gray-600">
-            We&apos;re deeply founder-focused. That means understanding your product,
-            customers, and vision faster than your competitors. We design to
-            help you win, not just to look good.
+            We&apos;re deeply founder-focused. That means understanding your
+            product, customers, and vision faster than your competitors. We
+            design to help you win, not just to look good.
           </p>
         </div>
         <div className="pt-20 lg:row-span-2 lg:-mr-16 xl:mr-auto">
