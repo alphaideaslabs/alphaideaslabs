@@ -1,5 +1,5 @@
 import { Container } from '@/components/container'
-import { Footer } from '@/components/footer'
+import Footer from '@/components/footer'
 import { Gradient, GradientBackground } from '@/components/gradient'
 import { Link } from '@/components/link'
 import { LogoCloud } from '@/components/logo-cloud'

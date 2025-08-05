@@ -19,7 +19,7 @@ export function Heading({
       data-dark={dark ? 'true' : undefined}
       className={clsx(
         className,
-        'text-pretty text-4xl font-medium tracking-tighter text-gray-950 data-[dark]:text-white sm:text-6xl',
+        'text-pretty text-4xl font-medium tracking-tighter text-[#101820] dark:text-[#FFFBEB] sm:text-6xl',
       )}
     />
   )
@@ -37,7 +37,7 @@ export function Subheading({
       data-dark={dark ? 'true' : undefined}
       className={clsx(
         className,
-        'text-xs/5 font-semibold tracking-widest text-gray-500 data-[dark]:text-gray-400',
+        'text-xs/5 font-semibold tracking-widest text-[#101820]/70 dark:text-[#FFFBEB]/70',
       )}
     />
   )

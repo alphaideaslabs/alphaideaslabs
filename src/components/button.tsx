@@ -9,7 +9,7 @@ const variants = {
     'whitespace-nowrap text-base font-medium',
     'transition-all duration-300 ease-in-out',
     'hover:border-[#101820]/40 hover:bg-white hover:text-[#101820]',
-    'dark:bg-[#FFC62B] dark:text-[#152534]',
+    'dark:bg-[#FFFBEB] dark:text-[#101820]',
     'dark:hover:border-[#FFC62B]/40 dark:hover:bg-white dark:hover:text-[#101820]',
     'data-[disabled]:cursor-not-allowed data-[disabled]:opacity-40',
   ),

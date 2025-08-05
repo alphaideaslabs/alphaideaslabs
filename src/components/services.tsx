@@ -2,7 +2,6 @@
 
 import React, { type ReactElement } from 'react'
 
-import { BorderBeam } from '@/components/magicui/border-beam'
 import {
   Accordion,
   AccordionContent,
@@ -78,10 +77,10 @@ export default function Features() {
       <div className="bg-linear-to-b absolute inset-0 -z-10 dark:block dark:to-[color-mix(in_oklab,var(--color-zinc-900)_75%,var(--color-background))] sm:inset-6 sm:rounded-b-3xl"></div>
       <div className="mx-auto max-w-2xl space-y-8 dark:[--color-border:color-mix(in_oklab,var(--color-white)_10%,transparent)] md:space-y-14 lg:max-w-7xl lg:space-y-20">
         <div className="relative z-10 max-w-2xl space-y-4 text-left md:space-y-6">
-          <h2 className="text-balance text-3xl font-semibold text-[#101820] md:text-4xl lg:text-6xl">
+          <h2 className="text-balance text-3xl font-semibold text-[#101820] dark:text-[#FFFBEB] md:text-4xl lg:text-6xl">
             Services Alpa Ideas Labs Offers
           </h2>
-          <p className="text-base text-[#101820]/70 md:text-lg">
+          <p className="text-base text-[#101820]/70 dark:text-[#FFFBEB]/70 md:text-lg">
             Alpha Ideas Labs provides a range of services to help you establish
             a strong online presence and achieve your business goals.
           </p>
@@ -97,14 +96,8 @@ export default function Features() {
             {features.map((feature) => (
               <AccordionItem key={feature.key} value={feature.key}>
                 <AccordionTrigger>
-                  {/* <div className="flex items-center gap-3 text-lg font-semibold text-[#101820] md:text-xl lg:text-2xl">
-                    {React.cloneElement(feature.icon, {
-                      className: 'w-5 h-5 text-[#FFC62B]',
-                    })}
-                    <span>{feature.title}</span>
-                  </div> */}
-                  <div className="flex items-center gap-3 text-lg font-semibold text-[#101820] md:text-xl lg:text-2xl">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#FFFBEB]">
+                  <div className="flex items-center gap-3 text-lg font-semibold text-[#101820] dark:text-[#FFFBEB] md:text-xl lg:text-2xl">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#FFC62B]/20 dark:bg-[#FFC62B]/30">
                       {React.cloneElement(feature.icon, {
                         className: 'w-5 h-5 text-[#FFC62B]',
                       })}
@@ -113,7 +106,7 @@ export default function Features() {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
-                  <p className="text-sm font-light text-[#101820]/70 md:text-base">
+                  <p className="text-sm font-light text-[#101820]/70 dark:text-[#FFFBEB]/70 md:text-base">
                     {feature.description}
                   </p>
                 </AccordionContent>
@@ -131,7 +124,7 @@ export default function Features() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 6, scale: 0.98 }}
                   transition={{ duration: 0.2 }}
-                  className="size-full overflow-hidden rounded-2xl border bg-zinc-900 shadow-md"
+                  className="size-full overflow-hidden rounded-2xl border bg-[#101820] shadow-md"
                 >
                   <Image
                     src={images[activeItem].src}
@@ -143,11 +136,6 @@ export default function Features() {
                 </motion.div>
               </AnimatePresence>
             </div>
-            <BorderBeam
-              duration={6}
-              size={200}
-              className="from-transparent via-yellow-700 to-transparent dark:via-white/50"
-            />
           </div>
         </div>
       </div>

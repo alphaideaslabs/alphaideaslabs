@@ -1,6 +1,6 @@
 import { BentoCard } from '@/components/bento-card'
 import { Container } from '@/components/container'
-import { Footer } from '@/components/footer'
+import Footer from '@/components/footer'
 import { Keyboard } from '@/components/keyboard'
 import { LinkedAvatars } from '@/components/linked-avatars'
 import { LogoCloud } from '@/components/logo-cloud'
@@ -24,10 +24,10 @@ function Portofolio() {
   return (
     <div className="overflow-hidden">
       <Container className="pb-14">
-        <h2 className="max-w-3xl text-balance text-3xl font-semibold text-[#101820] md:text-4xl lg:text-6xl">
+        <h2 className="] max-w-3xl text-balance text-3xl font-semibold text-[#101820] dark:text-[#FFFBEB] md:text-4xl lg:text-6xl">
           Work that speaks for itself.
         </h2>
-        <p className="mt-6 max-w-3xl text-base text-[#101820]/70 md:text-lg">
+        <p className="mt-6 max-w-3xl text-base text-[#101820]/70 dark:text-[#FFFBEB]/70 md:text-lg">
           Explore how we help founders and brands turn ideas into stunning
           digital experiencesfrom bold logos to Web3-ready products.
         </p>
@@ -45,7 +45,7 @@ function Portofolio() {
 function BentoSection() {
   return (
     <Container>
-      <p className="mt-2 max-w-3xl text-base text-[#101820]/70 md:text-lg">
+      <p className="mt-2 max-w-3xl text-base text-[#101820]/70 dark:text-[#FFFBEB]/70 md:text-lg">
         Every project below is crafted with intention whether it’s a logo that
         defines a brand, a UI that guides a user, or a landing page that
         converts. We partner with startups and digitalfirst companies to bring
@@ -166,7 +166,7 @@ export default function Home() {
           <LogoCloud />
         </Container>
         <Services />
-        <div className="bg-gradient-to-b from-white from-50% to-gray-100 py-32">
+        <div className="bg-[#FFFBEB] py-32 dark:bg-[#101820]">
           <Portofolio />
           <BentoSection />
         </div>

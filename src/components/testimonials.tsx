@@ -149,14 +149,14 @@ function TestimonialCard({
 function CallToAction() {
   return (
     <div>
-      <p className="max-w-sm text-sm/6 text-gray-600">
+      <p className="max-w-sm text-sm/6 text-[#101820]/70 dark:text-[#FFFBEB]/70">
         Join the best sellers in the business and start using Radiant to hit
         your targets today.
       </p>
       <div className="mt-2">
         <Link
           href="#"
-          className="inline-flex items-center gap-2 text-sm/6 font-medium text-pink-600"
+          className="inline-flex items-center gap-2 text-sm/6 font-medium text-[#FFC62B]"
         >
           Get started
           <ArrowLongRightIcon className="size-5" />

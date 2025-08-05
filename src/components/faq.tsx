@@ -61,10 +61,10 @@ export default function FAQ() {
         <div className="flex flex-col gap-10 md:flex-row md:gap-16">
           <div className="md:w-1/3">
             <div className="sticky top-20">
-              <h2 className="mt-4 text-balance text-3xl font-semibold text-[#101820] md:text-4xl lg:text-6xl">
+              <h2 className="mt-4 text-balance text-3xl font-semibold text-[#101820] dark:text-[#FFFBEB] md:text-4xl lg:text-6xl">
                 Frequently Asked Questions
               </h2>
-              <p className="mt-4 text-sm text-[#101820]/70 md:text-sm lg:text-base">
+              <p className="mt-4 text-sm text-[#101820]/70 dark:text-[#FFFBEB]/70 md:text-sm lg:text-base">
                 Can&apos;t find what you&apos;re looking for? Contact our{' '}
                 <Link
                   href="#"
@@ -88,17 +88,17 @@ export default function FAQ() {
                       <div className="flex size-6">
                         <DynamicIcon
                           name={item.icon}
-                          className="m-auto size-4"
+                          className="m-auto size-4 text-[#FFC62B]"
                         />
                       </div>
-                      <span className="text-balance text-lg font-semibold text-[#101820]">
+                      <span className="text-balance text-lg font-semibold text-[#101820] dark:text-[#FFFBEB]">
                         {item.question}
                       </span>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="pb-5">
                     <div className="px-9">
-                      <p className="text-base text-[#101820]/70">
+                      <p className="text-base text-[#101820]/70 dark:text-[#FFFBEB]/70">
                         {item.answer}
                       </p>
                     </div>

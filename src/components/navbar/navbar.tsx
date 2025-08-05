@@ -1,6 +1,7 @@
 'use client'
 import { Button } from '@/components/button'
 import { Logo } from '@/components/logo'
+import ThemeToggle from '@/components/theme-toggle'
 import clsx from 'clsx'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
@@ -38,7 +39,7 @@ export default function Navbar() {
           'lg:max-w-fit lg:rounded-full lg:px-6', // ✅ desktop: fit & rounded full
           'border bg-background/70',
           'shadow-md backdrop-blur transition-all duration-300',
-          'dark:border[#101820]/70',
+          'dark:border[#101820]/70 dark:bg-[#101820]/70',
           'flex items-center justify-between gap-4',
           'mx-auto',
         )}
@@ -55,6 +56,11 @@ export default function Navbar() {
 
         {/* Right: Login button and Mobile Menu */}
         <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 lg:ml-6">
+            {/* <LangToggle /> */}
+            <ThemeToggle />
+          </div>
+
           <AnimatePresence>
             {scrolled && (
               <motion.div
@@ -68,7 +74,6 @@ export default function Navbar() {
               </motion.div>
             )}
           </AnimatePresence>
-
           <div className="lg:hidden">
             <NavigationSheet />
           </div>

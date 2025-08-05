@@ -32,15 +32,15 @@ function Key({
           ? {
               idle: {
                 scale: 1,
-                boxShadow: `rgb(255, 255, 255) 0px 0px 0px 0px, rgba(47, 127, 221, 0.8) 0px 0px 0px 1px, rgba(47, 127, 221, 0.15) 0px 0px 3px 3px,rgba(47, 127, 221, 0.1) 0px 0px 0px 0px`,
+                boxShadow: `rgb(255, 255, 255) 0px 0px 0px 0px, rgba(255, 203, 71, 0.8) 0px 0px 0px 1px, rgba(255, 203, 71, 0.2) 0px 0px 3px 3px, rgba(255, 203, 71, 0.1) 0px 0px 0px 0px`,
               },
               active: {
                 scale: [1, 1.02, 1.02, 1],
                 boxShadow: [
-                  `rgb(255, 255, 255) 0px 0px 0px 0px, rgba(47, 127, 221, 0.8) 0px 0px 0px 1px, rgba(47, 127, 221, 0.15) 0px 0px 3px 3px, rgba(47, 127, 221, 0.05) 0px 0px 0px 0px`,
-                  `rgb(255, 255, 255) 0px 0px 0px 0px, rgba(47, 127, 221, 0.8) 0px 0px 0px 1px, rgba(47, 127, 221, 0.1) 0px 0px 1px 6px, rgba(47, 127, 221, 0.05) 0px 0px 1px 15px`,
-                  `rgb(255, 255, 255) 0px 0px 0px 0px, rgba(47, 127, 221, 0.8) 0px 0px 0px 1px, rgba(47, 127, 221, 0.0) 0px 0px 1px 6px, rgba(47, 127, 221, 0.01) 0px 0px 1px 15px`,
-                  `rgb(255, 255, 255) 0px 0px 0px 0px, rgba(47, 127, 221, 0.8) 0px 0px 0px 1px, rgba(47, 127, 221, 0.0) 0px 0px 3px 3px, rgba(47, 127, 221, 0.00) 0px 0px 0px 0px`,
+                  `rgb(255, 255, 255) 0px 0px 0px 0px, rgba(255, 203, 71, 0.8) 0px 0px 0px 1px, rgba(255, 203, 71, 0.2) 0px 0px 3px 3px, rgba(255, 203, 71, 0.1) 0px 0px 0px 0px`,
+                  `rgb(255, 255, 255) 0px 0px 0px 0px, rgba(255, 203, 71, 0.8) 0px 0px 0px 1px, rgba(255, 203, 71, 0.2) 0px 0px 1px 6px, rgba(255, 203, 71, 0.1) 0px 0px 1px 15px`,
+                  `rgb(255, 255, 255) 0px 0px 0px 0px, rgba(255, 203, 71, 0.8) 0px 0px 0px 1px, rgba(255, 203, 71, 0.0) 0px 0px 1px 6px, rgba(255, 203, 71, 0.05) 0px 0px 1px 15px`,
+                  `rgb(255, 255, 255) 0px 0px 0px 0px, rgba(255, 203, 71, 0.8) 0px 0px 0px 1px, rgba(255, 203, 71, 0.0) 0px 0px 3px 3px, rgba(255, 203, 71, 0.00) 0px 0px 0px 0px`,
                 ],
                 transition: {
                   repeat: Infinity,
@@ -57,7 +57,7 @@ function Key({
       className={clsx(
         className,
         'flex flex-col items-center justify-center gap-0.5 px-1 py-px',
-        'rounded bg-white bg-gradient-to-t from-black/[3%] shadow-[0_1px_rgb(0_0_0_/_0.05)] ring-1 ring-black/10',
+        'rounded bg-background/70 bg-gradient-to-t from-black/[3%] shadow-[0_1px_rgb(0_0_0_/_0.05)] ring-1 ring-black/10',
         '[:where(&_svg)]:h-3.5 [:where(&_svg)]:fill-gray-600',
       )}
     >

@@ -1,13 +1,19 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
 
 export function Logo({ className }: { className?: string }) {
-  let transition = {
-    duration: 0.5,
-    ease: 'easeInOut',
-  }
+  const { theme } = useTheme()
+  const [hasMounted, setHasMounted] = useState(false)
 
+  useEffect(() => {
+    setHasMounted(true)
+  }, [])
+
+  // Default to dark until mounted to avoid mismatch
+  const circleFill = hasMounted && theme === 'dark' ? '#FFFFFF' : '#152534'
   return (
     <div className={`flex items-center gap-3 ${className}`}>
       <motion.svg
@@ -30,23 +36,12 @@ export function Logo({ className }: { className?: string }) {
           cx="478.352"
           cy="96.4119"
           r="61.8026"
-          fill="#152534"
+          fill={circleFill}
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         />
       </motion.svg>
-      {/* Text */}
-      <motion.span
-        className="text-[#101820]"
-        initial={{ opacity: 0, x: -10 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.4, duration: 0.6, ease: 'easeOut' }}
-      >
-        {/* <TypingAnimation className="text-lg font-semibold md:text-xl lg:text-2xl">
-          Alpha Ideas Labs
-        </TypingAnimation> */}
-      </motion.span>
     </div>
   )
 }
