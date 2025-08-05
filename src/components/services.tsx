@@ -8,8 +8,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { CodeXml, FileImage, Frame, SplinePointer } from 'lucide-react'
-import { AnimatePresence, motion } from 'motion/react'
 import Image from 'next/image'
 import { useState } from 'react'
 
@@ -78,7 +78,7 @@ export default function Features() {
       <div className="mx-auto max-w-2xl space-y-8 dark:[--color-border:color-mix(in_oklab,var(--color-white)_10%,transparent)] md:space-y-14 lg:max-w-7xl lg:space-y-20">
         <div className="relative z-10 max-w-2xl space-y-4 text-left md:space-y-6">
           <h2 className="text-balance text-3xl font-semibold text-[#101820] dark:text-[#FFFBEB] md:text-4xl lg:text-6xl">
-            Services Alpa Ideas Labs Offers
+            Services Alpha Ideas Labs Offers
           </h2>
           <p className="text-base text-[#101820]/70 dark:text-[#FFFBEB]/70 md:text-lg">
             Alpha Ideas Labs provides a range of services to help you establish
@@ -90,7 +90,7 @@ export default function Features() {
           <Accordion
             type="single"
             value={activeItem}
-            onValueChange={(value) => setActiveItem(value as ImageKey)}
+            onValueChange={(value: ImageKey) => setActiveItem(value)}
             className="w-full"
           >
             {features.map((feature) => (
