@@ -28,15 +28,17 @@ export default function TeamSection() {
   return (
     <section className="bg-gray-50 px-4 py-12 dark:bg-transparent md:px-6 md:py-16 lg:px-0 lg:py-20">
       <div className="mx-auto max-w-2xl space-y-8 border-t md:space-y-14 lg:max-w-7xl lg:space-y-20">
-        <span className="text-caption -ml-6 -mt-3.5 block w-max bg-gray-50 px-6 dark:bg-gray-950">
+        <span className="text-caption -ml-6 -mt-3.5 block w-max bg-gray-50 px-6 text-[#101820] dark:bg-gray-950 dark:text-[#FFFBEB]">
           Team
         </span>
         <div className="mt-12 gap-4 sm:grid sm:grid-cols-2 md:mt-24">
           <div className="sm:w-2/5">
-            <h2 className="text-3xl font-bold sm:text-4xl">Our dream team</h2>
+            <h2 className="text-3xl font-bold text-[#101820] dark:text-[#FFFBEB] sm:text-4xl">
+              Our dream team
+            </h2>
           </div>
           <div className="mt-6 sm:mt-0">
-            <p>
+            <p className="text-[#101820]/70 dark:text-[#FFFBEB]/70">
               We’re a small team of specialists not generalists with deep
               expertise in design, development, and growth.
             </p>
@@ -55,20 +57,21 @@ export default function TeamSection() {
                 />
                 <div className="px-2 pt-2 sm:pb-0 sm:pt-4">
                   <div className="flex justify-between">
-                    <h3 className="text-title text-base font-medium transition-all duration-500 group-hover:tracking-wider">
+                    <h3 className="text-title text-base font-medium text-[#101820] transition-all duration-500 group-hover:tracking-wider dark:text-[#FFFBEB]">
                       {member.name}
                     </h3>
-                    <span className="text-xs">_0{index + 1}</span>
+                    <span className="text-xs text-[#101820]/70 dark:text-[#FFFBEB]/70">
+                      _0{index + 1}
+                    </span>
                   </div>
                   <div className="mt-1 flex items-center justify-between">
-                    <span className="inline-block translate-y-6 text-sm text-muted-foreground opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                    <span className="inline-block translate-y-6 text-sm text-[#101820] text-muted-foreground opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100 dark:text-[#FFFBEB]">
                       {member.role}
                     </span>
                     <Link
                       href={member.link}
-                      className="group-hover:text-primary-600 dark:group-hover:text-primary-400 inline-block translate-y-8 text-sm tracking-wide opacity-0 transition-all duration-500 hover:underline group-hover:translate-y-0 group-hover:opacity-100"
+                      className="group-hover:text-primary-600 dark:group-hover:text-primary-400 inline-block translate-y-8 text-sm tracking-wide text-[#101820]/70 opacity-0 transition-all duration-500 hover:underline group-hover:translate-y-0 group-hover:opacity-100 dark:text-[#FFFBEB]/70"
                     >
-                      {' '}
                       Linktree
                     </Link>
                   </div>

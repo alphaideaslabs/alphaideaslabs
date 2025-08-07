@@ -5,7 +5,9 @@ import { Link } from '@/components/link'
 import { LogoCloud } from '@/components/logo-cloud'
 import Navbar from '@/components/navbar/navbar'
 import { Heading, Lead, Subheading } from '@/components/text'
-import { Button } from '@/components/ui/button'
+// import { Button } from '@/components/ui/button'
+import { Button } from '@/components/button'
+
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import {
   CheckIcon,
@@ -125,7 +127,7 @@ function PricingCards() {
             <PricingCard key={tierIndex} tier={tier} />
           ))}
         </div>
-        <div className="mt-24 rounded-2xl bg-white px-8 shadow-md">
+        <div className="mt-24 rounded-2xl bg-background px-8 shadow-md">
           <LogoCloud />
         </div>
       </Container>
@@ -137,14 +139,16 @@ function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
   return (
     <div className="-m-2 grid grid-cols-1 rounded-4xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
       <div className="grid grid-cols-1 rounded-4xl p-2 shadow-md shadow-black/5">
-        <div className="rounded-3xl bg-white p-10 pb-9 shadow-2xl ring-1 ring-black/5">
+        <div className="rounded-3xl bg-[#FFFBEB] p-10 pb-9 shadow-2xl ring-1 ring-black/5 dark:bg-[#101820]">
           <Subheading>{tier.name}</Subheading>
-          <p className="mt-2 text-sm/6 text-gray-950/75">{tier.description}</p>
+          <p className="mt-2 text-sm/6 text-[#101820] dark:text-[#FFFBEB]">
+            {tier.description}
+          </p>
           <div className="mt-8 flex items-center gap-4">
-            <div className="text-5xl font-medium text-gray-950">
+            <div className="text-5xl font-medium text-[#101820] dark:text-[#FFFBEB]">
               ${tier.priceMonthly}
             </div>
-            <div className="text-sm/5 text-gray-950/75">
+            <div className="text-sm/5 text-[#101820]/70 dark:text-[#FFFBEB]/70">
               <p>USD</p>
               <p>per month</p>
             </div>
@@ -155,7 +159,7 @@ function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
             </Link>
           </div>
           <div className="mt-8">
-            <h3 className="text-sm/6 font-medium text-gray-950">
+            <h3 className="text-sm/6 font-medium text-[#101820] dark:text-[#FFFBEB]">
               Start selling with:
             </h3>
             <ul className="mt-3 space-y-3">
@@ -345,10 +349,10 @@ function FeatureItem({
   return (
     <li
       data-disabled={disabled ? true : undefined}
-      className="flex items-start gap-4 text-sm/6 text-gray-950/75 data-[disabled]:text-gray-950/25"
+      className="flex items-start gap-4 text-sm/6 text-[#101820]/70 data-[disabled]:text-gray-950/25 dark:text-[#FFFBEB]/70"
     >
       <span className="inline-flex h-6 items-center">
-        <PlusIcon className="size-[0.9375rem] shrink-0 fill-gray-950/25" />
+        <PlusIcon className="size-[0.9375rem] shrink-0 fill-[#101820]/70 dark:fill-[#FFFBEB]/70" />
       </span>
       {disabled && <span className="sr-only">Not included:</span>}
       {description}
@@ -366,7 +370,7 @@ function PlusIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 function Testimonial() {
   return (
-    <div className="mx-2 my-24 rounded-4xl bg-[#FFC62B] bg-[url(/dot-texture.svg)] pb-24 pt-72 lg:pt-36">
+    <div className="mx-2 my-24 rounded-4xl bg-[#FFC62B]/20 bg-[url(/dot-texture.svg)] pb-24 pt-72 dark:bg-[#101820] lg:pt-36">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-[384px_1fr_1fr]">
           <div className="-mt-96 lg:-mt-52">
@@ -385,7 +389,7 @@ function Testimonial() {
           <div className="flex max-lg:mt-16 lg:col-span-2 lg:px-16">
             <figure className="mx-auto flex max-w-xl flex-col gap-16 max-lg:text-center">
               <blockquote>
-                <p className="relative text-3xl tracking-tight text-[#1a1a1a] before:absolute before:-translate-x-full before:content-['“'] after:absolute after:content-['”'] lg:text-4xl">
+                <p className="relative text-3xl tracking-tight text-[#101820] before:absolute before:-translate-x-full before:content-['“'] after:absolute after:content-['”'] dark:text-[#FFFBEB] lg:text-4xl">
                   Alpha helped us go from looking like a high school Figma
                   project to getting replies from actual VCs. The turnaround
                   speed was insane and yes, they even fixed our pitch deck
@@ -393,7 +397,7 @@ function Testimonial() {
                 </p>
               </blockquote>
               <figcaption className="mt-auto">
-                <p className="text-sm/6 font-medium text-[#1a1a1a]">
+                <p className="text-sm/6 font-medium text-[#101820] dark:text-[#FFFBEB]">
                   Vanessa W.
                 </p>
                 <span className="bg-gradient-to-r from-[#5e4d00] via-[#98417d] to-[#4e2c7f] bg-clip-text text-transparent">
@@ -408,88 +412,6 @@ function Testimonial() {
   )
 }
 
-function FrequentlyAskedQuestions() {
-  return (
-    <Container>
-      <section id="faqs" className="scroll-mt-8">
-        <Subheading className="text-center">
-          Frequently asked questions
-        </Subheading>
-        <Heading as="div" className="mt-2 text-center">
-          Your questions answered.
-        </Heading>
-        <div className="mx-auto mb-32 mt-16 max-w-xl space-y-12">
-          <dl>
-            <dt className="text-sm font-semibold">
-              What measures are in place to ensure the security of our data?
-            </dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
-              Data security is a top priority for us, which is ironic given that
-              our business depends on others not taking it very seriously. We
-              understand that any breach could put both us and most of our
-              customers out of business—and behind bars. We employ robust
-              security measures, including data encryption, secure data centers,
-              and regular security audits to ensure this never happens.
-            </dd>
-          </dl>
-          <dl>
-            <dt className="text-sm font-semibold">
-              Is there a mobile app available for your platform?
-            </dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
-              Yes, we offer a mobile app that provides all the key
-              functionalities of our desktop platform, allowing sales reps to
-              manage deals on the go. Additionally, we have another app
-              pre-installed on most modern smartphones that allows us to track
-              your location, listen to your conversations, and access your
-              camera and microphone at any time. This app is not available for
-              download.
-            </dd>
-          </dl>
-          <dl>
-            <dt className="text-sm font-semibold">
-              Can I customize the workflow to match our company’s deal process?
-            </dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
-              Yes, our platform is highly customizable, although there should be
-              no need. Before you sign up, we discreetly gather information
-              about your company and its processes from a variety of sources. We
-              then use this information to pre-configure the platform to match
-              your existing workflows. This is why we ask for your social
-              security number and access to your email account during the
-              sign-up process.
-            </dd>
-          </dl>
-          <dl>
-            <dt className="text-sm font-semibold">
-              What kind of support do you offer?
-            </dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
-              We offer comprehensive support through multiple channels,
-              including 24/7 live chat, email, and phone support. However, since
-              we have full access to your internal network, we will know if
-              you’re having issues before you do.
-            </dd>
-          </dl>
-          <dl>
-            <dt className="text-sm font-semibold">
-              Can I integrate the CRM with other sales intelligence tools?
-            </dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
-              Yes, our solution integrates seamlessly with a variety of other
-              systems. However, be warned that most of these integrations are
-              short-lived. We have a dedicated team of engineers who
-              reverse-engineer the APIs of other tools, enabling us to build
-              their functionality into our product and eventually put them out
-              of business.
-            </dd>
-          </dl>
-        </div>
-      </section>
-    </Container>
-  )
-}
-
 type Props = {
   searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
 }
@@ -501,16 +423,15 @@ export default async function Pricing({ searchParams }: Props) {
       ? tiers.find(({ slug }) => slug === resolvedSearchParams.tier)!
       : tiers[0]
   return (
-    <main className="overflow-hidden pb-32 pt-48 md:pb-48 md:pt-44 lg:pb-32 lg:pt-64">
+    <main className="overflow-hidden pt-48 md:pt-44 lg:pt-64">
       <GradientBackground />
       <Container>
         <Navbar />
       </Container>
       <Header />
       <PricingCards />
-      <PricingTable selectedTier={tier} />
+      {/* <PricingTable selectedTier={tier} /> */}
       <Testimonial />
-      <FrequentlyAskedQuestions />
       <Footer />
     </main>
   )

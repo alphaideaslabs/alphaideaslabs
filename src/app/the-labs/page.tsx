@@ -26,14 +26,16 @@ function Header() {
       </Lead>
       <section className="mt-16 grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
         <div className="max-w-lg">
-          <h2 className="text-2xl font-medium tracking-tight">Our mission</h2>
-          <p className="mt-6 text-sm/6 text-gray-600">
+          <h2 className="text-2xl font-medium tracking-tight text-[#101820] dark:text-[#FFFBEB]">
+            Our mission
+          </h2>
+          <p className="mt-6 text-sm/6 text-[#101820]/70 dark:text-[#FFFBEB]/70">
             We help early-stage companies stand out in noisy markets through
             sharp design and storytelling. From UI/UX to social media visuals to
             Web3 dev, our team transforms raw ideas into assets that move people
             and markets.
           </p>
-          <p className="mt-8 text-sm/6 text-gray-600">
+          <p className="mt-8 text-sm/6 text-[#101820]/70 dark:text-[#FFFBEB]/70">
             We&apos;re deeply founder-focused. That means understanding your
             product, customers, and vision faster than your competitors. We
             design to help you win, not just to look good.
@@ -76,30 +78,34 @@ function Header() {
           <hr className="mt-6 border-t border-gray-200" />
           <dl className="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
             <div className="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4">
-              <dt className="text-sm/6 text-gray-600">Early clients</dt>
-              <dd className="order-first text-6xl font-medium tracking-tight">
+              <dt className="text-sm/6 text-[#101820]/70 dark:text-[#FFFBEB]/70">
+                Early clients
+              </dt>
+              <dd className="order-first text-6xl font-medium tracking-tight text-[#101820] dark:text-[#FFFBEB]">
                 <AnimatedNumber start={1} end={10} />+
               </dd>
             </div>
             <div className="flex flex-col gap-y-2 border-b border-dotted border-gray-200 pb-4">
-              <dt className="text-sm/6 text-gray-600">
+              <dt className="text-sm/6 text-[#101820]/70 dark:text-[#FFFBEB]/70">
                 Design/dev assets shipped
               </dt>
-              <dd className="order-first text-6xl font-medium tracking-tight">
+              <dd className="order-first text-6xl font-medium tracking-tight text-[#101820] dark:text-[#FFFBEB]">
                 <AnimatedNumber start={10} end={20} />+
               </dd>
             </div>
             <div className="flex flex-col gap-y-2 max-sm:border-b max-sm:border-dotted max-sm:border-gray-200 max-sm:pb-4">
-              <dt className="text-sm/6 text-gray-600">Remote & async</dt>
-              <dd className="order-first text-6xl font-medium tracking-tight">
+              <dt className="text-sm/6 text-[#101820]/70 dark:text-[#FFFBEB]/70">
+                Remote & async
+              </dt>
+              <dd className="order-first text-6xl font-medium tracking-tight text-[#101820] dark:text-[#FFFBEB]">
                 <AnimatedNumber start={80} end={100} />%
               </dd>
             </div>
             <div className="flex flex-col gap-y-2">
-              <dt className="text-sm/6 text-gray-600">
+              <dt className="text-sm/6 text-[#101820]/70 dark:text-[#FFFBEB]/70">
                 Shared mission grow together
               </dt>
-              <dd className="order-first text-6xl font-medium tracking-tight">
+              <dd className="order-first text-6xl font-medium tracking-tight text-[#101820] dark:text-[#FFFBEB]">
                 <AnimatedNumber start={0} end={1} />
               </dd>
             </div>
@@ -358,7 +364,7 @@ function Careers() {
 
 export default function Company() {
   return (
-    <main className="overflow-hidden pb-32 pt-48 md:pb-48 md:pt-44 lg:pb-32 lg:pt-64">
+    <main className="overflow-hidden pt-48 md:pt-44 lg:pt-64">
       <GradientBackground />
       <Container>
         <Navbar />

@@ -49,7 +49,10 @@ export function Lead({
 }: React.ComponentPropsWithoutRef<'p'>) {
   return (
     <p
-      className={clsx(className, 'text-2xl font-medium text-gray-500')}
+      className={clsx(
+        className,
+        'text-2xl font-medium text-[#101820]/70 dark:text-[#FFFBEB]/70',
+      )}
       {...props}
     />
   )
